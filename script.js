@@ -57,16 +57,21 @@ function dropdownOpt3(event){
     }
     let iframe = ``;
     document.getElementById("dropdown3").innerText = event.target.innerText;
-    switch(event.target.innerText){
-        case(roleOfTeamDipsy[0]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/ac5b8d2b-97de-488d-989a-25ed80a3bba8/run"></iframe></div>';
-        case(roleOfTeamDipsy[1]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/eccfe206-fcf1-4322-bcfb-5d64ffe13dd9/run"></iframe></div>';
-        case(roleOfTeamTinkyWinky[0]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/256bdac7-d1b6-405c-9395-137ec2ded0f4/run"></iframe></div>';
-        case(roleOfTeamTinkyWinky[1]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/2f3cc736-fa37-4f8c-8a58-644f322eacf2/run"></iframe></div>';
-        case(roleOfTeamLaaLaa[0]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/4dff38c8-f330-4d0e-899f-a1c2e65cb211/run"></iframe></div>';
-        case(roleOfTeamLaaLaa[1]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/ebca13ef-37bb-49eb-8e6b-a6daabc40ed5/run"></iframe></div>';
-        case(roleOfTeamPo[0]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/76236bd1-9c62-4d0c-9bf7-6594b6997887/run"></iframe></div>';
-        case(roleOfTeamPo[1]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/4787e06d-e805-4d93-98e3-0381ec6edaa0/run"></iframe></div>';
-    }
+    iframe = getIframe(event.target.innerText);
     const resulttext = document.getElementById("powerautomate-iframe");
     resulttext.insertAdjacentHTML("beforebegin",iframe);
 }; 
+
+
+function getIframe(innerText){
+    switch(innerText){
+        case(roleOfTeamDipsy[0]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/ac5b8d2b-97de-488d-989a-25ed80a3bba8/run"></iframe></div>';
+        case(roleOfTeamDipsy[1]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/eccfe206-fcf1-4322-bcfb-5d64ffe13dd9/run"></iframe></div>';
+        case(roleOfTeamTinkyWinky[0]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/256bdac7-d1b6-405c-9395-137ec2ded0f4/run"></iframe></div>';
+        case(roleOfTeamTinkyWinky[1]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/2f3cc736-fa37-4f8c-8a58-644f322eacf2/run"></iframe></div>';
+        case(roleOfTeamLaaLaa[0]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/4dff38c8-f330-4d0e-899f-a1c2e65cb211/run"></iframe></div>';
+        case(roleOfTeamLaaLaa[1]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/ebca13ef-37bb-49eb-8e6b-a6daabc40ed5/run"></iframe></div>';
+        case(roleOfTeamPo[0]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/76236bd1-9c62-4d0c-9bf7-6594b6997887/run"></iframe></div>';
+        case(roleOfTeamPo[1]): return '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/4787e06d-e805-4d93-98e3-0381ec6edaa0/run"></iframe></div>';
+    }
+}
