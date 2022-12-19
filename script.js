@@ -67,8 +67,6 @@ function dropdownOpt3(event){
         case(roleOfTeamPo[0]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/76236bd1-9c62-4d0c-9bf7-6594b6997887/run"></iframe></div>';
         case(roleOfTeamPo[1]): iframe = '<div class="container" id = "container" ><iframe class="responsive-iframe" width = "100%" height = "800px" src="https://make.powerautomate.com/environments/Default-916e3244-4945-42e9-9c5c-eeca5d5b8748/flows/4787e06d-e805-4d93-98e3-0381ec6edaa0/run"></iframe></div>';
     }
-    const resulttext = document.getElementById("submit");
+    const resulttext = document.getElementById("powerautomate-iframe");
     resulttext.insertAdjacentHTML("beforebegin",iframe);
-
-    
 }; 
